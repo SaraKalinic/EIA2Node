@@ -1,41 +1,27 @@
+"use strict";
 console.log("Server starting");
-
-import Http = require("http");
-import Url = require("url");
-
-interface AssocStringString {
-    [key: string]: string;
-}
-
-let port: number = process.env.PORT;
+const Http = require("http");
+const Url = require("url");
+let port = process.env.PORT;
 if (port == undefined)
     port = 8100;
-
-let server: Http.Server = Http.createServer();
+let server = Http.createServer();
 server.addListener("listening", handleListen);
 server.addListener("request", handleRequest);
 server.listen(port);
-
-function handleListen(): void {
+function handleListen() {
     console.log("Listening on port: " + port);
 }
-
-function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
+function handleRequest(_request, _response) {
     console.log("Request received");
-
     console.log(_request.url);
-    let query: AssocStringString = Url.parse(_request.url, true).query;
+    let query = Url.parse(_request.url, true).query;
     console.log(query);
-        
-    let key: string;
-    
+    let key;
     _response.setHeader("Access-Control-Allow-Origin", "*");
     _response.setHeader("content-type", "text/html; charset=utf-8");
-
     for (key in query)
         _response.write(key + ":" + query[key] + "<br>");
-
-    
-    
     _response.end();
 }
+//# sourceMappingURL=node.js.map
