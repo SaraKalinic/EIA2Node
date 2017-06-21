@@ -26,16 +26,15 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     console.log(_request.url);
     let query: AssocStringString = Url.parse(_request.url, true).query;
     console.log(query);
-        
+    
     let key: string;
     
     _response.setHeader("Access-Control-Allow-Origin", "*");
     _response.setHeader("content-type", "text/html; charset=utf-8");
-
+    
     for (key in query)
-        _response.write(key + ":" + query[key] + "<br>");
+      _response.write(key + ":" + query[key]);
 
-    
-    
+   
     _response.end();
 }
