@@ -36,6 +36,6 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     
         if(query[key] != "0") {
         _response.write(key + ": " + query[key] + "</br>");
-    }
+    } 
     _response.end();
 }
