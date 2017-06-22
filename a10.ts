@@ -67,6 +67,7 @@ namespace Eisdealer {
         input.min = "0";
         input.max = "10";
         input.value = "0";
+        input.name = _flavors;
         label.id = _flavors;
         iceCream.appendChild(label);
         inputFlavors.push(input);
@@ -84,6 +85,7 @@ namespace Eisdealer {
         label.innerText = _Checkboxen;
         label.appendChild(input);
         input.type = "checkbox";
+        input.name = _Checkboxen;
         label.id = _Checkboxen;
         sosse.appendChild(label);
         inputSauces.push(input);
@@ -100,6 +102,7 @@ namespace Eisdealer {
         label.innerText = _Checkboxen;
         label.appendChild(input);
         input.type = "checkbox";
+        input.name = _Checkboxen;
         label.id = _Checkboxen;
         topping.appendChild(label);
         inputToppings.push(input);
@@ -117,7 +120,7 @@ namespace Eisdealer {
         label.innerText = _Radiobutton;
         label.appendChild(input);
         input.type = "radio";
-        input.name = "Radiobutton";
+        input.name = "Cone";
         label.id = _Radiobutton;
         becher.appendChild(label);
         inputCone.push(input);
@@ -275,6 +278,7 @@ namespace Eisdealer {
         else {
             alert("Thank you for ordering! :)");
             (<HTMLFormElement>document.getElementById("formeis")).submit();
+            
         }
     }
 }

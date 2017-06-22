@@ -21,7 +21,9 @@ function handleRequest(_request, _response) {
     _response.setHeader("Access-Control-Allow-Origin", "*");
     _response.setHeader("content-type", "text/html; charset=utf-8");
     for (key in query)
-        _response.write(key + ": " + query[key] + "</br>");
+        if (query[key] != "0") {
+            _response.write(key + ": " + query[key] + "</br>");
+        }
     _response.end();
 }
 //# sourceMappingURL=node.js.map

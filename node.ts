@@ -28,13 +28,13 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     console.log(query);
     
     let key: string;
-    
+
     _response.setHeader("Access-Control-Allow-Origin", "*");
     _response.setHeader("content-type", "text/html; charset=utf-8");
-    
-    for (key in query)
-      _response.write(key + ": " + query[key] + "</br>" );
 
-   
+    for (key in query)
+        if(query[key] != "0") {
+        _response.write(key + ": " + query[key] + "</br>");
+    }
     _response.end();
 }
