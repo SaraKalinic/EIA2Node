@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+@media screen and (min-width: 320px) {
+	
+	html {
+		background-color: #009999;
+		font-family: 'Permanent Marker', cursive;
+	}
+	body {
+		border: 2px solid #b3ffd9;
+		margin: 2em;
+		background-color: #e6fff2;
+		line-height: 2em;
+		padding: 1em;
+	}
+	header {
+		color: #009999;
+		text-align: center;
+		font-family: 'Permanent Marker', cursive;
+	}
+	
+	#ice {
+
+	width: 200px; 
+	}
+	
+	legend {
+		font-size: 1.5em;
+		color: #009999;
+		text-align: center;
+		font-family: 'Permanent Marker', cursive;
+	}
+	input[type="radio"], input[type="checkbox"], label {
+		display: inline;
+	}
+	label::after {
+		content: "";
+		display: block;
+	}
+	input:valid {
+		background: #ffffff;
+	}
+	fieldset {
+		width: 70%;
+		margin-left: 8%;
+		border: 2px solid #b3ffd9;
+		margin-top: 3%;
+		background-color: #ffffff;
+	}
+	button {
+		margin-top: 1em;
+		align: center;
+	}
+	.toppings {
+		margin-top: 0.7em;
+		margin-left: 1em;
+	}
+	.checkbox {
+		display: inline;
+		margin-left: 1em;
+	}
+	
+	
+	* {
+		display: block;
+		vertical-align: top
+	}
+}
+	
+	@media screen and (min-width:1024px) {
+		#Confirmation {
+			position: absolute;
+			float: right;
+			margin-left: 55%;
+			top: +100px;
+			width: 50%;
+		}
+		
+		fieldset {
+			width: 35%;
+			margin-left: 8%;
+			border: 2px solid #b3ffd9;
+			margin-top: 3%;
+			z-index: 100;
+		}
+		
+		button {
+		margin-top: 1em;
+		margin-left: 8em;
+	}
+		#ice {
+	position:absolute;
+	width: 200px; 
+	top: +1.25em;
+	left: +24em;}
+	}
+	
+		#cat {
+	position:absolute;
+	width: 200px; 
+	margin-top:2em;
+	margin-left: 6em;
+	}
+	}

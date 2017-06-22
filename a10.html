@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+<link rel="stylesheet" href="a10.css" type="text/css" media="screen" />
+<script src="a10.js" charset="utf-8"></script>
+</head>
+
+<body>
+	<header>
+
+		<h1>Unicone Ice Cream</h1>
+
+	</header>
+
+	<main>
+
+	<form id="formeis" action="https://eisdealerapp.herokuapp.com/" method="get">
+
+		<section id="Bestellung">
+			<div>
+				<!-- Cone -->
+				<fieldset id="cone">
+					<legend> Cone </legend>
+				</fieldset>
+
+				<!-- Flavors -->
+				<fieldset id="flavors">
+					<legend> Ice Cream Flavors - 1€ </legend>
+				</fieldset>
+			</div>
+
+			<div>
+				<!-- Sauces -->
+				<fieldset id="sauces">
+					<legend> Sauces - 0.20€ </legend>
+				</fieldset>
+
+				<!-- Toppings -->
+				<fieldset id="toppings">
+					<legend> Toppings - 0.50€ </legend>
+				</fieldset>
+			</div>
+		</section>
+
+
+		<section id="Confirmation">
+
+			<!-- Delivery Options -->
+			<fieldset id="deliveryOptions">
+				<legend> Lieferoptionen </legend>
+				<select name="delivery" id="delivery">
+					<option value="Standard">Standard</option>
+					<option value="Express">Express</option>
+				</select>
+			</fieldset>
+
+			<!--Order Review -->
+			<fieldset id="overview">
+				<legend> Your Order </legend>
+				<p id="orderOverview"></p>
+				<h4>Sum:</h4>
+				<p id="sum"></p>
+			</fieldset>
+
+			<!-- Contact -->
+			<fieldset id="Contact">
+				<legend> Contact </legend>
+				Name <input type="text" name="surame" placeholder="Insert surname"
+					required id="surname" /> Vorname <input type="text" name="name"
+					placeholder="Insert name" required id="name" /> Straße <input
+					type="text" name="street" placeholder="Insert street" required
+					id="street" /> Ort,PLZ <input type="text" name="city, postcode"
+					placeholder="Insert city and postcode" required id="city,postcode" />
+				Mail <input type="email" name="Mail" placeholder="Insert Email"
+					id="Email" />
+			</fieldset>
+
+			<button name="button" type="button" id="sendOrder">Review
+				your order and send it off</button>
+		</form>
+
+	</section>
+	</main>
+</body>

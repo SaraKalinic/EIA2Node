@@ -33,7 +33,7 @@ function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerRes
     _response.setHeader("content-type", "text/html; charset=utf-8");
     
     for (key in query)
-      _response.write(key + ":" + query[key]);
+      _response.write(key + ": " + query[key] + "</br>" );
 
    
     _response.end();
